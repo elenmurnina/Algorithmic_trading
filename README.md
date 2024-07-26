@@ -21,25 +21,7 @@ Implementation of the Algorithmic trading project.
     3.5. [Part 5](#part-5-bonus-approximation-with-weights)
 
 
-## Chapter I  
-
-![Algorithmic trading](misc/images/Algorithmic_trading.JPG)
-
-`-` "Anyway, Bob told you the essence of the task, didn't he?"
-
-`-` "Yes, the implementation of simplest interpolation and approximation methods. But I still don't understand what it's all for. He mentioned something about investments and clients, but he seemed more interested in what was happening on his screen," Eve answered to Dave, the lead developer in the finance department, to whom she had been transferred to help. Bob mentioned in his conversation with Eve that they were currently understaffed and had a lot of urgent tasks to take care of.
-
-`-` "That's right. But it's not really something we need right now - it's more of an order from the AID department."
-
-`-` "Wait, AID? What kind of department is that? I mean, we have a big company on every continent, but I have never heard of this department before."
-
-`-` "It's funny that you don't know. That’s an Assistive Intelligence Development department. AI assistants in short.  By the way, Alice is in charge there, with Charlie's help."
-
-`-` "Alice? But she was just doing simple object detection on video for surveillance systems."
-
-`-` "Not for a year now. Not many people know about the AID, of course: NDA, corporate secrecy, billions of dollars at stake, and all that. But you seemed to be talking quite a lot with her, so... I don't know," Dave stopped his apparently unsuccessful attempts to comfort an upset and confused Eve.  She struggled to figure out why her friend hadn't said anything.
-
-`-` "So, yeah, about the task," Dave continued as if nothing had happened. "We were asked to write a module that could assist and accompany clients in their bidding.." Eve was no longer really paying attention to what Dave was saying. All she was concerned about was the unexpected news.  Although this explained Alice's recent behavior, some things were still unclear and had yet to be figured out.
+## Chapter I 
 
 ## Introduction
 
@@ -200,23 +182,3 @@ The user sets the number of points *k = 1000000* and the number of partitions *h
 The result will be two graphs, each consisting of 11 points:
 * the dependence of the number of points `k` from `t_spline`
 * the dependence of the number of points `k` from `t_newton`
-
-## Part 5. Bonus. Approximation with weights
-
-Add weights to the table function of stock quotes and take them into account when plotting graphs.
-
-- Add the 3rd column to the source data files: point weights
-- For all values that have no weight specified, it is considered equal to 1
-- Adapt the method of least squares so that it takes into account the weights of points
-- Add the ability to plot the following 4 graphs simultaneously:
-    - With the degree of polynomial 1 for a table with user-defined weights
-    -  With the degree of polynomial 2 for a table with user-defined weights
-    -  With the degree of polynomial 1 for a table in which all weights are 1
-    -  With the degree of polynomial 2 for a table in which all weights are 1
-- Find the weights that change the sign of the slope of the line corresponding to degree 1 of the polynomial
-- Save the file part4.csv to the src folder in the repository, where the weights are set so that the condition of the previous point is met
-
-__*__ - This is not an investment recommendation.
-
-
-💡 [Tap here](https://forms.yandex.ru/cloud/64181fd2eb61462527cee6b5/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
