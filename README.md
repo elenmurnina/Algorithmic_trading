@@ -13,12 +13,6 @@ Implementation of the Algorithmic trading project.
     2.3. [Cubic spline interpolation](#cubic-spline-interpolation)  
     2.4. [Approximation](#approximation)  
     2.5. [Least Squares Method](#least-squares-method)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Part 1](#part-1-interpolation-of-tabulated-functions-with-cubic-spline-interpolation)  
-    3.2. [Part 2](#part-2-approximation-of-tabulated-functions)  
-    3.3. [Part 3](#part-3-bonus-interpolation-of-tabulated-functions-with-newton-interpolation-polynomial)  
-    3.4. [Part 4](#part-4-bonus-research-on-temporal-characteristics)  
-    3.5. [Part 5](#part-5-bonus-approximation-with-weights)
 
 
 ## Chapter I 
@@ -126,59 +120,3 @@ Moreover, the graph should cover a longer period of time than the input data:
     - Degree of polynomial
 - If there are already 5 graphs displayed in the field, the buttons for drawing new graphs must be blocked
 - Provide the ability to display the value of the approximating function for a given degree of the polynomial according to the user-defined value of the argument (date and time)
-
-## Part 3. Bonus. Interpolation of tabulated functions with Newton interpolation polynomial
-
-You need to plot a tabulated function of stock quotes using interpolation methods:
-
-- The program must be developed in C++ language of C++17 standard
-- The library code must be located in the src folder in the develop branch
-- When writing code it is necessary to follow the Google style
-- The program must be built with Makefile which contains standard set of targets for GNU-programs all, install, uninstall, clean, dvi, dist. Installation directory could be arbitrary, except the building one
-- GUI implementation, based on any GUI library with API for C++ (Qt, SFML, GTK+, Nanogui, Nngui, etc.)
-- The data are loaded into the program from a file with stock quotes with the .csv extension:
-    -  The file contains data in the form of a table, where the first column is the date, the second column is the value of the function (examples of data files are in the materials folder)
-- When uploading a new data file, clear the field for drawing graphs
-- The user sets the number of points on which the graph should be plotted (the number of points is not less than in the loaded file)
-- All points are evenly distributed between the start and end dates
-- On the final graph adjacent points must be connected by a straight line
-- The *Newton's Polynomial of nth degree* interpolation method must be implemented.
-- There should be a button in the interface for drawing the graph by the Newton polynomial of nth degree
-- There should be a field in the interface for entering the degree of the Newton polynomial
-- There should be a button in the interface for clearing the field to draw graphs (the field is cleared only when you click on this button or new data is uploaded)
-- There can be up to 5 graphs displayed in the field at the same time (all graphs have different color)
-- If there are already 5 graphs displayed in the field, the buttons for drawing new graphs must be blocked
-- The interface has to contain the following information about the graphs:
-    - Color
-    - Name of the file from which the data were taken
-    - Interpolation method (specifying the degree if it is a Newton polynomial)
-- Provide the ability to output the values of the stock quotes function obtained by both interpolation methods according to a user-defined argument value (date and time)
-
-## Part 4. Bonus. Research on temporal characteristics
-
-Study the temporal characteristics of interpolations by cubic spline and Newton polynomial methods, depending on the number of calculated points.
-
-- The user sets the maximum number of points `k` and the number of partitions `h`.
-- The minimum number `k` is the number of entries in the input table
-- You need to measure the time required to calculate values using the spline interpolation algorithms and Newton's method, depending on the change in the number of points.  There must be a total of `h` measurements of the algorithm runtime, the first of which is the measurement for $`k_1`$, where $`k_1`$ equals the number of points in the source file, and the last is $`k_h`$, where $`k_h`$ equals the maximum number of points `k` that is entered through the GUI.
-- Measurement of time at each iteration should be performed 10 times and the result should be the arithmetic mean of the obtained values
-- In the same field plot two graphs showing the dependencies of the time required to find values from the number of points `k` for two interpolation methods
-
-**Example** \
-The user sets the number of points *k = 1000000* and the number of partitions *h = 11*.  A file containing 100 entries is inputted, then the average running time of the spline and Newton interpolation algorithms will be calculated for the next number of points:
-
-    k1 = 100, t1_spline = <average_time_for_calculating_100_points_by_splines>, t1_newton = <average_time_for_calculating_100_points_by_Newton’s_method> 
-    k2 = 100090, t2_spline = <average_time_for_calculating_100090_points_by_splines>, t2_newton = <average_time_for_calculating_100090_points_by_Newton’s_method> 
-    k3 = 200080, t3_spline = <average_time_for_calculating_200080_points_by_splines>, t3_newton = <average_time_for_calculating_200080_points_by_Newton’s_method> 
-    k4 = 300070, t4_spline = <average_time_for_calculating_300070_points_by_splines>, t4_newton = <average_time_for_calculating_300070_points_by_Newton’s_method> 
-    k5 = 400060, t5_spline = <average_time_for_calculating_400060_points_by_splines>, t5_newton = <average_time_for_calculating_400060_points_by_Newton’s_method> 
-    k6 = 500050, t6_spline = <average_time_for_calculating_500050_points_by_splines>, t6_newton = <average_time_for_calculating_500050_points_by_Newton’s_method> 
-    k7 = 600040, t7_spline = <average_time_for_calculating_600040_points_by_splines>, t7_newton = <average_time_for_calculating_600040_points_by_Newton’s_method> 
-    k8 = 700030, t8_spline = <average_time_for_calculating_700030_points_by_splines>, t8_newton = <average_time_for_calculating_700030_points_by_Newton’s_method> 
-    k9 = 800020, t9_spline = <average_time_for_calculating_800020_points_by_splines>, t9_newton = <average_time_for_calculating_800020_points_by_Newton’s_method> 
-    k10 = 900010, t10_spline = <average_time_for_calculating_900010_points_by_splines>, t10_newton = <average_time_for_calculating_900010_points_by_Newton’s_method> 
-    k11 = 1000000, t11_spline = <average_time_for_calculating_1000000_points_by_splines>, t11_newton = <average_time_for_calculating_1000000_points_by_Newton’s_method> 
-
-The result will be two graphs, each consisting of 11 points:
-* the dependence of the number of points `k` from `t_spline`
-* the dependence of the number of points `k` from `t_newton`
