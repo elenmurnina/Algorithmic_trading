@@ -14,8 +14,8 @@ Implementation of the Algorithmic trading project.
     2.4. [Approximation](#approximation)  
     2.5. [Least Squares Method](#least-squares-method)
 3. [Chapter III](#chapter-iii) \
-    3.1. [Part 1](#part-1-interpolation-of-tabulated-functions-with-cubic-spline-interpolation)  
-    3.2. [Part 2](#part-2-approximation-of-tabulated-functions)  
+    3.1. [Interpolation of tabulated functions with cubic spline interpolation](#part-1-interpolation-of-tabulated-functions-with-cubic-spline-interpolation)  
+    3.2. [Approximation of tabulated functions](#part-2-approximation-of-tabulated-functions)  
 
 ## Chapter I 
 
