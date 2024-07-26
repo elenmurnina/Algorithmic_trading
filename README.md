@@ -1,9 +1,6 @@
 # Algorithmic trading
 
-Implementation of the Algorithmic trading project.
-
-
-## Contents
+Implementation of the Algorithmic trading project. Qt library GUI.
 
 1. [Chapter I](#chapter-i) \
     1.1. [Introduction](#introduction)
